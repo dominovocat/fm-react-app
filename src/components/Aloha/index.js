@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 
 class Aloha extends Component {
   constructor(props) {
@@ -12,16 +12,17 @@ class Aloha extends Component {
     });
   };
   render() {
-    const { name } = this.props;
+    const { name, id } = this.props;
     const { isHi } = this.state;
     if (isHi) {
       return (
         <>
-          <h2>Hi,{name}!</h2>
+          <h2>{id})Hi,{name}!</h2>
           <button onClick={this.handlerBtn}>Aloha</button>
         </>
       );
     }
+    return <h2>Bye,{name}!</h2>;
   }
 }
 
