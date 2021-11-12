@@ -8,18 +8,18 @@ class Aloha extends Component {
   handlerBtn = () => {
     const { isHi } = this.state;
     this.setState({
-      isHi: !isHi
-    })
-  }
+      isHi: !isHi,
+    });
+  };
   render() {
     const { name } = this.props;
     const { isHi } = this.state;
-    return (
-      <>
-        <h2>{isHi ? "Hi" : "Bye"},{name}!</h2>
+    if (isHi) {
+      return <>
+        <h2>Hi,{name}!</h2>
         <button onClick={this.handlerBtn}>Aloha</button>
-      </>
-    )
+      </>;
+    }
   }
 }
 

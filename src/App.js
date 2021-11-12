@@ -3,7 +3,7 @@ import "./App.css";
 import React from "react";
 import Aloha from "./components/Aloha";
 
-function App() {
+// function App() {
   // return (
   //   <div className="App">
   //     <header className="App-header">
@@ -25,19 +25,21 @@ function App() {
 
   // return <h1>Hi! JSX</h1>;
   // return React.createElement('h1',null,'Hi! JSX');
-
-  const user = {
-    fname: "Elon",
-    sname: "Musk",
-  };
-
-  return (
-    <>
-      <Aloha name={`${user.fname} ${user.sname}`} />
-      <Aloha name="Robert Downy" />
-      <Aloha name="Tim Le" />
-    </>
-  );
-}
+  
+  class App extends Component(){
+    constructor(props){
+      super(props);
+      this.state = {
+        fname:'Elon',
+        sname:'Musk'
+      }
+    }
+    render(){
+      const {fname} = this.state;
+      return <>
+      <Aloha name={fname}
+      </>
+    }
+  }
 
 export default App;
