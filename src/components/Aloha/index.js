@@ -15,10 +15,12 @@ class Aloha extends Component {
     const { name } = this.props;
     const { isHi } = this.state;
     if (isHi) {
-      return <>
-        <h2>Hi,{name}!</h2>
-        <button onClick={this.handlerBtn}>Aloha</button>
-      </>;
+      return (
+        <>
+          <h2>Hi,{name}!</h2>
+          <button onClick={this.handlerBtn}>Aloha</button>
+        </>
+      );
     }
   }
 }
