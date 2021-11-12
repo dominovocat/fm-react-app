@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 import React from "react";
-import Greeting from "./components/Greeting";
+import Aloha from "./components/Aloha";
 
 function App() {
   // return (
@@ -26,11 +26,16 @@ function App() {
   // return <h1>Hi! JSX</h1>;
   // return React.createElement('h1',null,'Hi! JSX');
 
+  const user = {
+    fname: "Elon",
+    sname: "Musk",
+  };
+
   return (
     <>
-      <Greeting hello='Hi' name='Elon Musk'/>
-      <Greeting hello='Holla' name='Robert Downy'/>
-      <Greeting hello='hey' name='Tim Le'/>
+      <Aloha name={`${user.fname} ${user.sname}`} />
+      <Aloha name="Robert Downy" />
+      <Aloha name="Tim Le" />
     </>
   );
 }
